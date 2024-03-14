@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="demo.css" type="text/css"/>
+		
+		<script src="src/fastclick.js"></script>
+		<script src="jquery.js"></script>
+		<script src="src/jquery.easyfader.js"></script>
+		<script src="src/jquery.easyfader.slide.js"></script>
+		<script src="src/jquery.easyfader.carousel.js"></script>
+		<script src="src/jquery.easyfader.swipe.js"></script>
+		<script>
+			$(function(){
+				FastClick.attach(document.body);
+				
+				$('#Carousel').easyFader({
+					effect: 'carousel',
+					effectDur: 5
+				});
+				$('#Fader').easyFader({
+					autoCycle: true,
+				});
+				$('#Slider').easyFader({
+					effect: 'slide',
+					autoCycle: true
+				});
+			});
+		</script>
+	</head>
+	<body>
+	
+		<div id="Slider" class="fader">
+			<div class="wrapper">
+				<img class="slide" src="http://www.barrelny.com/wp-content/uploads/about-office-slide-pingpong2-800x500.jpg"/>
+				<img class="slide" src="http://www.barrelny.com/wp-content/uploads/about-office-slide-bookcase-800x500.jpg"/>
+				<img class="slide" src="http://www.barrelny.com/wp-content/uploads/about-office-slide-bikerack-800x500.jpg"/>
+				<img class="slide" src="http://www.barrelny.com/wp-content/uploads/about-office-slide-kitchen-800x500.jpg"/>
+			</div>
+		   
+		</div>
+	</body>
+</html>

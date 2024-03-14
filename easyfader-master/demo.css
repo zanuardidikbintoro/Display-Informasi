@@ -1,0 +1,162 @@
+/* --- RESET --- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section{
+	display: block;
+}
+
+table{
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: normal;
+}
+
+a{
+	text-decoration: none;
+}
+
+nav li{
+	list-style-type: none;
+	display: inline-block;
+}
+
+
+body{
+  font-family: "futura", arial;
+}
+
+.fader{
+    position: relative;
+    padding-top: 15%;
+    overflow: hidden;
+	width: 25%;
+	margin: 100px auto 0;
+	
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+} 
+ 
+.fader .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+
+	-ms-filter: 'alpha(opacity=0)';
+}
+ 
+.fader img.slide{
+    height: auto;
+}
+
+.prev,
+.next{
+  position: absolute;
+  height: 80px;
+  line-height: 55px;
+  width: 50px;
+  font-size: 100px;
+  text-align: center;
+  color: #fff;
+  top: 50%;
+  left: 0;
+  z-index: 4;
+  margin-top: -25px;
+  cursor: pointer;
+  opacity: .7;
+  transition: all 150ms;
+}
+
+.prev:hover,
+.next:hover{
+  opacity: 1;
+}
+
+.next{
+  left: auto;
+  right: 0;
+}
+
+.pager-list{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	bottom: 0;
+	text-align: center;
+	z-index: 4;
+	padding: 0;
+}
+
+.pager-list li{
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 7px;
+  background: #fff;
+  opacity: .7;
+  text-indent: -9999px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 150ms;
+}
+
+.pager-list li:hover,
+.pager-list li.active{
+  opacity: 1;
+}
+
+.carousel{
+	margin-top: 100px;
+	padding-top: 200px;
+	background: #000;
+	overflow: hidden;
+	position: relative;
+}
+
+.carousel .wrapper{
+	position: absolute;
+	top: 0;
+	width: 1000%;
+	left: 50%;
+	height: 100%;
+	margin-left: -500%;
+	text-align: center;
+	white-space: nowrap;
+	font-size: 0;
+	
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+}
+
+.carousel .slide{
+	height: 200px;
+	
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+}

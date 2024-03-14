@@ -1,0 +1,28 @@
+<html>
+<head>
+
+<script language="javascript" runat="server" type="text/javascript">
+function mytime()
+   {
+   var d=new Date();
+   //ap="am";
+   h=d.getHours();
+   m=d.getMinutes();
+   s=d.getSeconds();
+   //if (h>11) { ap = "pm"; }
+   //if (h>24) { h = h-12; }
+   //if (h>24) { h = 0; }
+   if (h==0) { h = 0; }
+   if (m<10) { m = "0" + m; }
+   if (s<10) { s = "0" + s; }
+   document.getElementById('timehere').innerHTML=h + ":" + m + ":" + s + " ";
+   t=setTimeout('mytime()',500);
+   }
+
+</script>
+</head>
+
+<body onLoad="mytime()">
+<div id="timehere" style="font-size:30px; color:#9C0" ></div>
+</body>
+</html>
